@@ -39,6 +39,7 @@
 
 
 //=======callbacks===========
+
 const posts = 
 [
 {
@@ -61,32 +62,90 @@ body: 'body3'
 
 ];
 
-
-function createPost(callback)
+const post = 
 {
-  setTimeout(function(){
-    posts.push({id: 4,
-      title: 'title4',
-      body: 'body4'});
-      callback();
-  },3000);
+  id: 4,
+  title: 'title4',
+  body: 'body4'
+};
+
+function createPost(post)
+{
+  return new Promise(function(resolve,reject)
+  {
+    setTimeout(function(){
+      posts.push(post);
+        resolve();
+    },3000);
+  });
+  
+  
+
 }
+
+
 
 function getPost()
 {
   setTimeout(function(){
-    let output = '';
-  posts.forEach(function(post){
-    output+=
-    `
-    <li>${post.title}</li>
-    
-    `
-  });
 
-  document.body.innerHTML = output;
-  },2000);
+    let output = '';
+
+    posts.forEach(function(post){
+
+      output +=
+      `
+      <li>${post.title}</li>
+      
+      `
+
+      document.getElementById('output').innerHTML = output;
+
+      
+      
+
+    })
+  },2000)
 }
 
-createPost(getPost);
+createPost().then(getPost);
 // getPost();
+
+
+
+
+
+
+
+
+
+
+
+// function createPost(callback)
+// {
+//   setTimeout(function(){
+//     posts.push({id: 4,
+//       title: 'title4',
+//       body: 'body4'});
+//       callback();
+//   },3000);
+// }
+
+// function getPost()
+// {
+//   setTimeout(function(){
+//     let output = '';
+//   posts.forEach(function(post){
+//     output+=
+//     `
+//     <li>${post.title}</li>
+    
+//     `
+//   });
+
+//   document.body.innerHTML = output;
+//   },2000);
+// }
+
+// createPost(getPost);
+// // getPost();
