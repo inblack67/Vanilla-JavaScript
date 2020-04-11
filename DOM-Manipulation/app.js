@@ -1,20 +1,41 @@
-const newContainer = document.createElement('div')
-newContainer.className = 'container'
-newContainer.id = 'container2'
-newContainer.setAttribute('title', 'div2')
+const button = document.querySelector('.fullscreen')
 
-// newContainer.innerText = 'hello div'
+const clicked = (e) => {
+    const nav = document.querySelector('nav');
+    nav.className = 'red'
+}
 
-const newTextNode = document.createTextNode('hello div')
-newContainer.appendChild(newTextNode);
+const unClicked = (e) => {
+    const nav = document.querySelector('nav');
+    nav.className = 'blue'
+    console.log(e.shiftKey);
+    console.log(e.altKey);
+    console.log(e.ctrlKey);
+}
 
-// console.log(newContainer);
+button.addEventListener('mousedown', clicked);    
+button.addEventListener('mouseup', unClicked);
+// dblclick
+// click
+// mouseenter
+// mouseleave
+// mouseover
+// mouseleave
+// cut
+// copy
+// paste
+// focus
+// blur
+// change (select)
+// submit
 
-const title = document.querySelector('.container p');
-const input = document.querySelector('input[type=text]')
-const container = document.querySelector('.container')
 
-// container.insertBefore(newContainer, title)
+const input = document.querySelector('input')
+input.addEventListener('keyup', e => {
+    console.log(e.target.value);
+})
 
-// title.appendChild(newContainer)
-
+input.addEventListener('paste', (e) => {
+    e.preventDefault();
+    console.log('can\'t paste');
+})
