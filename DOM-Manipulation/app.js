@@ -1,21 +1,20 @@
-const item = document.querySelector('.collection-item');
-const parent = item.parentElement
-// const container = parent.parentElement;
+const newContainer = document.createElement('div')
+newContainer.className = 'container'
+newContainer.id = 'container2'
+newContainer.setAttribute('title', 'div2')
 
-console.log(parent);
+// newContainer.innerText = 'hello div'
 
-const collection = document.querySelector('.collection')
+const newTextNode = document.createTextNode('hello div')
+newContainer.appendChild(newTextNode);
 
-console.log(parent===collection);
+// console.log(newContainer);
 
-// even counts line breaks
-console.log(collection.childNodes);
-console.log(collection.firstChild);
-console.log(collection.nextSibling);
-console.log(collection.previousSibling);
+const title = document.querySelector('.container p');
+const input = document.querySelector('input[type=text]')
+const container = document.querySelector('.container')
 
-// preferable
-console.log(collection.children);
-console.log(collection.firstElementChild);
-console.log(collection.nextElementSibling);
-console.log(collection.previousElementSibling);
+// container.insertBefore(newContainer, title)
+
+// title.appendChild(newContainer)
+
