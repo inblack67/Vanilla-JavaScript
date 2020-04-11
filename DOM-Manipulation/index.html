@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
     <link rel="stylesheet" href="../materialize/css/materialize.min.css">
   </head>
   <body>
 
     <nav class="blue">
-      <a href="/" class="brand-logo">Listner</a>
+      <a href="#!" class="brand-logo">Listner</a>
     </nav>
 
     <div class="container">
@@ -28,18 +31,29 @@
 
       <br>
 
+      <div class="input-field">
+        <input id='filter' type="text" placeholder="Start Typing...">
+        <label>Filter Items</label>
+      </div>
+      
+      <br>
+
       <p class="flow-text">Items</p>
       <ul class="collection">
-        <li class="collection-item">Item 1</li>
-        <li class="collection-item">Item 2</li>
-        <li class="collection-item">Item 3</li>
-        <li class="collection-item">Item 4</li>
+        <li class="collection-item">Item 1
+          <i class="material-icons secondary-content red-text">delete</i>
+        </li>
+        <li class="collection-item">Item 2
+          <i class="material-icons secondary-content red-text">delete</i>
+        </li>
+        <li class="collection-item">Item 3
+          <i class="material-icons secondary-content red-text">delete</i>
+        </li>
       </ul>
 
       <br>
 
-      <button class="btn fullscreen grey darken-2" style="width: 100%;">Click Me</button>
-
+      <!-- <button class="btn fullscreen red darken-2" style="width: 100%;">Click Me</button> -->
 
     </div>
 

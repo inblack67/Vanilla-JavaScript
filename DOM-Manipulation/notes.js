@@ -16,6 +16,12 @@ for (const i of y) {
     i.style.backgroundColor = 'grey'
 }
 
+const btn = document.querySelector('button')
+btn.classList.remove('darken-2')
+btn.classList.add('pulse')
+console.log(btn.classList);
+
+
 // TRAVERSING THE DOM
 const item = document.querySelector('.collection-item');
 const parent = item.parentElement
