@@ -1,0 +1,3 @@
+function MemberFactory(){
+    this.createMember = 
+}

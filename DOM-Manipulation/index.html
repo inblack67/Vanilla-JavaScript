@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+  </head>
+  <body>
+
+    <nav class="blue">
+      <a href="/" class="brand-logo">Listner</a>
+    </nav>
+
+    <div class="container">
+      <p class="flow-text">Add Items</p>
+      <br>
+      <form>
+        <div class="input-field">
+          <input type="text" placeholder="Add Item">
+          <label for="item">Item</label>
+        </div>
+        <div class="input-field"> 
+          <input type="submit" value="Add" class="btn grey darken-2">
+        </div>
+      </form>
+
+      <br>
+
+      <p class="flow-text">Items</p>
+      <ul class="collection">
+        <li class="collection-item">Item 1</li>
+        <li class="collection-item">Item 2</li>
+        <li class="collection-item">Item 3</li>
+        <li class="collection-item">Item 4</li>
+      </ul>
+    </div>
+
+
+    <script src="../materialize/js/materialize.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
