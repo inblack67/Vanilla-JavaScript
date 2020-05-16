@@ -15,7 +15,7 @@ console.log(res1);
 const res2 = re.test('hello');
 console.log(res2);
 
-let str = 'yohello bitches';
+const str = 'yohello bitches';
 const res3 = str.match(re);
 console.log(res3);
 
@@ -27,15 +27,3 @@ console.log(res4);
 const res5 = str.replace('hello', 'hi');
 console.log(res5);
 
-re = /^hello/gi;
-re = /hello$/gi;
-str = 'helloworldshello';
-re = /^hello$/gi;   // only hello
-str = 'hello';
-const res6 = re.exec(str);
-console.log(res6);
-
-re = /he.llo/gi;
-str = 'l';
-const res7 = re.exec(str);
-console.log(res7);
