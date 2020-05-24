@@ -4,7 +4,7 @@
 const a = 1;
 const name = {};
 function change(a, name){
-    a = 1;
+    a = 2;
     name.firstName = 'Aman';
     name.lastName = 'Bhardwaj';
     // but the function cannot change what name object points to, it can only change its props not its dest.
