@@ -10,6 +10,7 @@ function Person(firstName, lastName){
 
 const developer = new Person('Aman', 'Bhardwaj');
 console.log(developer);
+developer.firstName = 'A-Man'
 console.log(developer.fullName());
 
 Person.prototype.occupation = function(){
