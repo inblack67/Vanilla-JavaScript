@@ -1,4 +1,7 @@
 const fs = require("fs");
+const util = require('util');
+
+// const readFile = util.promisify(fs.readFile);  // does the same thing 
 
 function readFile(filename, encoding) {
   const promise = new Promise((resolve, reject) => {
