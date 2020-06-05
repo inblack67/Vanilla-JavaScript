@@ -1,15 +1,13 @@
-function promise(){
-    return new Promise(res => res('Resolev bitch'));
+function* asyncGenerator() {
+    for (let i = 0; i < 10; i++) {
+        yield Promise.resolve(i);
+    }
 }
 
-const fun = async () => {
-    // code is synchronous now - thats why try catch works fine
-    const res = await promise();
-    console.log(res);
-    console.log('TEST');
-}
+const it3 = asyncGenerator();
 
-// fun();
-
-// async function itself returns promise so
-fun().then(_ => console.log('Finished'));
+(async () => {
+    for await (let num of it3) {
+        console.log(num);
+      }
+})();

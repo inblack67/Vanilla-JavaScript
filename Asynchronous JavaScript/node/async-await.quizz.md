@@ -27,7 +27,7 @@ const fileIterator = files => ({
   [Symbol.asyncIterator]: () => ({
     x: 0,
     next() {
-      // TODO
+      
     }
   })
 });
