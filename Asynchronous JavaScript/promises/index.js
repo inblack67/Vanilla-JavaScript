@@ -18,3 +18,14 @@ function readFile(filename, encoding) {
 }
 
 readFile("./node/files/demofile.txt", "utf-8").then(data => console.log(data), err => console.error(err));
+
+
+const getValue = () => Promise.resolve(25);
+
+const first = getValue();
+
+first.then(x => x + 10);
+
+const res = first.then(x => x + 10);
+
+res.then(val => console.log(val));  // 35
